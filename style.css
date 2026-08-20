@@ -1,0 +1,363 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+
+    /* PURE BLACK BACKGROUND */
+    background: #000000;
+
+    color: #ffffff;
+
+    min-height: 100vh;
+}
+
+
+.container {
+    width: 90%;
+
+    max-width: 1000px;
+
+    margin: auto;
+
+    padding: 40px 0;
+}
+
+
+/* HEADER */
+
+header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 30px;
+}
+
+
+h1 {
+    font-size: 32px;
+
+    margin-bottom: 8px;
+}
+
+
+header p {
+    color: #999999;
+}
+
+
+.date {
+    color: #4da3ff;
+}
+
+
+/* STATISTICS */
+
+.stats {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+}
+
+
+.stat {
+    background: #050505;
+
+    border: 1px solid #222222;
+
+    border-radius: 12px;
+
+    padding: 20px;
+}
+
+
+.stat span {
+    color: #999999;
+}
+
+
+.stat strong {
+    display: block;
+
+    font-size: 30px;
+
+    margin-top: 10px;
+
+    color: #3d9bff;
+}
+
+
+/* ADD TASK */
+
+.add-box {
+    display: flex;
+
+    gap: 10px;
+
+    background: #050505;
+
+    border: 1px solid #222222;
+
+    padding: 20px;
+
+    border-radius: 12px;
+
+    margin-bottom: 18px;
+}
+
+
+/* INPUTS */
+
+input,
+select {
+    background: #000000;
+
+    color: #ffffff;
+
+    border: 1px solid #333333;
+
+    border-radius: 7px;
+
+    padding: 12px;
+
+    outline: none;
+}
+
+
+input:focus,
+select:focus {
+    border-color: #3d9bff;
+}
+
+
+.add-box input {
+    flex: 1;
+}
+
+
+/* BUTTON */
+
+button {
+    border: none;
+
+    border-radius: 7px;
+
+    padding: 12px 20px;
+
+    background: #287df0;
+
+    color: #ffffff;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+
+button:hover {
+    background: #1768d8;
+}
+
+
+/* SEARCH */
+
+.toolbar {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+    margin-bottom: 18px;
+}
+
+
+.toolbar input {
+    flex: 1;
+}
+
+
+/* TASK LIST */
+
+#taskList {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+/* TASK */
+
+.task {
+    background: #050505;
+
+    border: 1px solid #222222;
+
+    border-radius: 10px;
+
+    padding: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+.task.done {
+    opacity: 0.6;
+}
+
+
+.task.done .task-name {
+    text-decoration: line-through;
+}
+
+
+/* CHECKBOX */
+
+.check {
+    width: 20px;
+
+    height: 20px;
+
+    cursor: pointer;
+}
+
+
+/* TASK INFORMATION */
+
+.task-info {
+    flex: 1;
+}
+
+
+.task-name {
+    font-size: 16px;
+
+    margin-bottom: 7px;
+}
+
+
+.task small {
+    color: #777777;
+}
+
+
+/* PRIORITY */
+
+.priority {
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+
+.High {
+    background: #40171c;
+
+    color: #ff6670;
+}
+
+
+.Medium {
+    background: #40330d;
+
+    color: #ffd34d;
+}
+
+
+.Low {
+    background: #103b22;
+
+    color: #48dc7a;
+}
+
+
+/* DELETE */
+
+.delete {
+    background: #35151a;
+
+    color: #ff6872;
+
+    padding: 8px 12px;
+}
+
+
+.delete:hover {
+    background: #551b22;
+}
+
+
+/* EMPTY */
+
+.empty {
+    text-align: center;
+
+    padding: 50px;
+
+    color: #777777;
+}
+
+
+.empty div {
+    font-size: 45px;
+
+    margin-bottom: 10px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+
+    header {
+        display: block;
+    }
+
+
+    .date {
+        margin-top: 10px;
+    }
+
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+
+    .add-box {
+        flex-direction: column;
+    }
+
+
+    .toolbar {
+        flex-direction: column;
+    }
+
+
+    .task {
+        flex-wrap: wrap;
+    }
+
+}

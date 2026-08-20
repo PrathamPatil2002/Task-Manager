@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Task Manager</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <header>
+            <div>
+                <h1>📋 Task Manager</h1>
+                <p>Organize your work and stay productive.</p>
+            </div>
+
+            <div class="date" id="date"></div>
+        </header>
+
+
+        <!-- Statistics -->
+        <section class="stats">
+
+            <div class="stat">
+                <span>📋 Total Tasks</span>
+                <strong id="total">0</strong>
+            </div>
+
+            <div class="stat">
+                <span>⏳ Pending</span>
+                <strong id="pending">0</strong>
+            </div>
+
+            <div class="stat">
+                <span>✅ Completed</span>
+                <strong id="completed">0</strong>
+            </div>
+
+        </section>
+
+
+        <!-- Add Task -->
+        <section class="add-box">
+
+            <input
+                type="text"
+                id="taskInput"
+                placeholder="Enter a new task..."
+            >
+
+            <select id="priority">
+
+                <option value="High">🔴 High</option>
+
+                <option value="Medium">🟡 Medium</option>
+
+                <option value="Low">🟢 Low</option>
+
+            </select>
+
+            <button onclick="addTask()">
+                + Add Task
+            </button>
+
+        </section>
+
+
+        <!-- Search and Filter -->
+        <div class="toolbar">
+
+            <input
+                type="text"
+                id="search"
+                placeholder="🔍 Search tasks..."
+                oninput="showTasks()"
+            >
+
+            <select
+                id="filter"
+                onchange="showTasks()"
+            >
+
+                <option value="All">
+                    All Tasks
+                </option>
+
+                <option value="Pending">
+                    Pending
+                </option>
+
+                <option value="Completed">
+                    Completed
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- Tasks -->
+        <section id="taskList"></section>
+
+
+        <!-- Empty Message -->
+        <div class="empty" id="empty">
+
+            <div>📭</div>
+
+            <h2>No tasks found</h2>
+
+            <p>Add a task to get started.</p>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
