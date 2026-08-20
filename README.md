@@ -4,9 +4,8 @@
 
 A simple and professional Task Manager web application built using HTML, CSS and JavaScript.
 
-🚀 Live Demo
-
-https://prathampatil2002.github.io/Task-Manager/
+## 🚀 Live Demo
+ https://prathampatil2002.github.io/Task-Manager/
 
 
 ## ✨ Features
